@@ -22,19 +22,15 @@ import csv
 
 election_csv = os.path.join( "Resources", "election_data.csv")
 
-# Lists to store data
-# title = []
-# price = []
-# subscribers = []
-# reviews = []
-# review_percent = []
-# length = []
-Khan = []
-# Use encoding for Windows
-# with open(udemy_csv, newline='', encoding='utf-8') as csvfile:
+data = []
 with open(election_csv, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    for row in csvreader:
-        # Add title
-        Khan.append(row[1])
-        print(len(Khan))
+    for row in csvreader: 
+        data.append((row[0]))
+        Total_Votes = len(data)
+        
+
+print("Election Results")
+print("---------------------------------")
+print("Total Votes:" +str(Total_Votes))
+print("---------------------------------")
