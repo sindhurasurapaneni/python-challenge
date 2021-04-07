@@ -1,6 +1,5 @@
 
 
-
 import os
 import csv
 
@@ -30,6 +29,15 @@ Percent_Correy = round((Correy / Total_Votes)*100,0)
 Percent_Li = round((Li / Total_Votes)*100,0)
 Percent_O_Tooley = round((O_Tooley / Total_Votes)*100,0)
 
+if Percent_Khan > Percent_Correy:
+            Winner = "Khan"
+elif Percent_Correy > Percent_Khan:
+             Winner = "Correy"
+elif Percent_Li > Percent_Khan:
+            Winner = "Li"
+elif Percent_O_Tooley > Percent_Khan:
+            Winner = "O'Tooley"
+
 print("Election Results")
 print("---------------------------------")
 print("Total Votes:" +str(Total_Votes))
@@ -38,3 +46,6 @@ print("Khan:"  + str(Percent_Khan) + "%"+ "(" + str(Khan) + ")")
 print("Correy:"  + str(Percent_Correy) + "%"+ "(" + str(Khan) + ")")
 print("Li:"  + str(Percent_Li) + "%"+ "(" + str(Khan) + ")")
 print("O_Tooley:"  + str(Percent_O_Tooley) + "%"+ "(" + str(Khan) + ")")
+print("---------------------------------")
+print("Winner:" + Winner)
+print("---------------------------------")
